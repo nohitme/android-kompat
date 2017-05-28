@@ -1,3 +1,3 @@
-include ':appkompat'
+include ':kompat'
 
-rootProject.name = "AppKompat"
+rootProject.name = "Kompat"
