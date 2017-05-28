@@ -1,2 +1,4 @@
-# App Kompat
-Android AppCompat Kotlin extension methods
+# Android Kompat
+
+Android Compat Kotlin extension functions and properties
+
