@@ -25,12 +25,6 @@ val AccessibilityServiceInfo.settingsActivityNameCompat get() = AccessibilitySer
 val AccessibilityServiceInfo.canRetrieveWindowContentCompat get() = AccessibilityServiceInfoCompat.getCanRetrieveWindowContent(this)
 
 /**
- * Call through [AccessibilityServiceInfoCompat.getDescription]
- */
-@Deprecated("Use loadDescription()", ReplaceWith("loadDescription(packageManager)"))
-val AccessibilityServiceInfo.descriptionCompat get() = AccessibilityServiceInfoCompat.getDescription(this)
-
-/**
  * Call through [AccessibilityServiceInfoCompat.loadDescription]
  */
 fun AccessibilityServiceInfo.loadDescriptionCompat(packageManager: PackageManager) = AccessibilityServiceInfoCompat.loadDescription(this, packageManager)
