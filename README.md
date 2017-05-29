@@ -34,6 +34,16 @@ var View.xCompat: Float
 
 All the functions and properties are posfixed with `*Compat` so you can see it pops up in IDE and know there's a compat method you should be using.
 
+## Download
+
+I just applied for the maven central account. Use [Jitpack][3] for now:
+
+```
+dependencies {
+	compile "com.github.nohitme:android-kompat:0.1" // or use commit hash directly
+}
+```
+
 ## Notes
 
 * The packages are the same as the ones defined in [Android Support Compat][2], so it's easier to track the changes
@@ -42,7 +52,6 @@ All the functions and properties are posfixed with `*Compat` so you can see it p
     2. If either getter or setter is not defined in compat class and it can be found in the normal Android class, the normal Android method would be used in conjunction with the compat method to make the extension property look more 'natural'
     3. Methods that are not suitable for properties will be converted into simple extionsion methods.
 * The project will be updated alongside with the latest stable support libarary.
-* No maven artifact is available at this moment, just use [Jitpack][1] to grab it, or you can copy the files into your project. It's straightforward enough.
 
 ## Feedbacks
 
