@@ -16,13 +16,20 @@ fun Activity.invalidateOptionsMenuCompat() = ActivityCompat.invalidateOptionsMen
 /**
  * Call through [ActivityCompat.startActivityForResult]
  */
-fun Activity.startActivityForResultCompat(intent: Intent, requestCode: Int, options: Bundle? = null) = ActivityCompat.startActivityForResult(this, intent, requestCode, options)
+fun Activity.startActivityForResultCompat(intent: Intent, requestCode: Int, options: Bundle? = null) =
+        ActivityCompat.startActivityForResult(this, intent, requestCode, options)
 
 /**
  * Call through [ActivityCompat.startIntentSenderForResult]
  */
 @Throws(IntentSender.SendIntentException::class)
-fun Activity.startIntentSenderForResultCompat(intent: IntentSender, requestCode: Int, fillInIntent: Intent, flagMask: Int, flagValues: Int, extraFlags: Int, options: Bundle? = null) =
+fun Activity.startIntentSenderForResultCompat(intent: IntentSender,
+                                              requestCode: Int,
+                                              fillInIntent: Intent,
+                                              flagMask: Int,
+                                              flagValues: Int,
+                                              extraFlags: Int,
+                                              options: Bundle? = null) =
         ActivityCompat.startIntentSenderForResult(this, intent, requestCode, fillInIntent, flagMask, flagValues, extraFlags, options)
 
 /**
@@ -38,17 +45,20 @@ fun Activity.finishAfterTransitionCompat() = ActivityCompat.finishAfterTransitio
 /**
  * Call through [ActivityCompat.getReferrer]
  */
-val Activity.referrerCompat get() = ActivityCompat.getReferrer(this)
+val Activity.referrerCompat
+    get() = ActivityCompat.getReferrer(this)
 
 /**
  * Call through [ActivityCompat.setEnterSharedElementCallback]
  */
-fun Activity.setEnterSharedElementCallbackCompat(sharedElementCallback: SharedElementCallback) = ActivityCompat.setEnterSharedElementCallback(this, sharedElementCallback)
+fun Activity.setEnterSharedElementCallbackCompat(sharedElementCallback: SharedElementCallback? = null) =
+        ActivityCompat.setEnterSharedElementCallback(this, sharedElementCallback)
 
 /**
  * Call through [ActivityCompat.setExitSharedElementCallback]
  */
-fun Activity.setExitSharedElementCallbackCompat(sharedElementCallback: SharedElementCallback) = ActivityCompat.setExitSharedElementCallback(this, sharedElementCallback)
+fun Activity.setExitSharedElementCallbackCompat(sharedElementCallback: SharedElementCallback? = null) =
+        ActivityCompat.setExitSharedElementCallback(this, sharedElementCallback)
 
 /**
  * Call through [ActivityCompat.postponeEnterTransition]
@@ -58,9 +68,12 @@ fun Activity.postponeEnterTransitionCompat() = ActivityCompat.postponeEnterTrans
 /**
  * Call through [ActivityCompat.requestPermissions]
  */
-fun Activity.requestPermissionsCompat(permissions: Array<String>, @IntRange(from = 0) requestCode: Int) = ActivityCompat.requestPermissions(this, permissions, requestCode)
+fun Activity.requestPermissionsCompat(permissions: Array<String>,
+                                      @IntRange(from = 0) requestCode: Int) =
+        ActivityCompat.requestPermissions(this, permissions, requestCode)
 
 /**
  * Call through [ActivityCompat.shouldShowRequestPermissionRationale]
  */
-fun Activity.shouldShowRequestPermissionRationaleCompat(permission: String) = ActivityCompat.shouldShowRequestPermissionRationale(this, permission)
+fun Activity.shouldShowRequestPermissionRationaleCompat(permission: String) =
+        ActivityCompat.shouldShowRequestPermissionRationale(this, permission)

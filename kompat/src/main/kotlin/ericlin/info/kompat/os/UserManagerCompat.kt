@@ -6,4 +6,5 @@ import android.support.v4.os.UserManagerCompat
 /**
  * Call through [UserManagerCompat.isUserUnlocked]
  */
-fun Context.isUserUnlockedCompat() = UserManagerCompat.isUserUnlocked(this)
+val Context.isUserUnlockedCompat
+    get() = UserManagerCompat.isUserUnlocked(this)

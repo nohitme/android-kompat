@@ -36,4 +36,5 @@ var ViewGroup.isTransitionGroupCompat: Boolean
 /**
  * Call through [ViewGroupCompat.getNestedScrollAxes]
  */
-val ViewGroup.nestedScrollAxesCompat get() = ViewGroupCompat.getNestedScrollAxes(this)
+val ViewGroup.nestedScrollAxesCompat
+    get() = ViewGroupCompat.getNestedScrollAxes(this)

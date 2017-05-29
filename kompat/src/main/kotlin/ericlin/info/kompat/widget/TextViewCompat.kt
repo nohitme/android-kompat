@@ -59,4 +59,5 @@ fun TextView.setTextAppearanceCompat(@StyleRes resId: Int) = TextViewCompat.setT
 /**
  * Call through [TextViewCompat.getCompoundDrawablesRelative]
  */
-val TextView.getCompoundDrawablesRelativeCompat get() = TextViewCompat.getCompoundDrawablesRelative(this)
+val TextView.compoundDrawablesRelativeCompat
+    get() = TextViewCompat.getCompoundDrawablesRelative(this)

@@ -11,12 +11,14 @@ fun Notification.extractMessagingStyleFromNotificationCompat() = NotificationCom
 /**
  * Call through [NotificationCompat.getExtras]
  */
-val Notification.extrasCompat get() = NotificationCompat.getExtras(this)
+val Notification.extrasCompat
+    get() = NotificationCompat.getExtras(this)
 
 /**
  * Call through [NotificationCompat.getActionCount]
  */
-val Notification.actionCountCompat get() = NotificationCompat.getActionCount(this)
+val Notification.actionCountCompat
+    get() = NotificationCompat.getActionCount(this)
 
 /**
  * Call through [NotificationCompat.getAction]
@@ -26,24 +28,29 @@ fun Notification.getActionCompat(actionIndex: Int) = NotificationCompat.getActio
 /**
  * Call through [NotificationCompat.getCategory]
  */
-val Notification.categoryCompat get() = NotificationCompat.getCategory(this)
+val Notification.categoryCompat
+    get() = NotificationCompat.getCategory(this)
 
 /**
  * Call through [NotificationCompat.getLocalOnly]
  */
-val Notification.localOnlyCompat get() = NotificationCompat.getLocalOnly(this)
+val Notification.localOnlyCompat
+    get() = NotificationCompat.getLocalOnly(this)
 
 /**
  * Call through [NotificationCompat.getGroup]
  */
-val Notification.groupCompat get() = NotificationCompat.getGroup(this)
+val Notification.groupCompat
+    get() = NotificationCompat.getGroup(this)
 
 /**
  * Call through [NotificationCompat.isGroupSummary]
  */
-fun Notification.isGroupSummaryCompat() = NotificationCompat.isGroupSummary(this)
+val Notification.isGroupSummaryCompat
+    get() = NotificationCompat.isGroupSummary(this)
 
 /**
  * Call through [NotificationCompat.getSortKey]
  */
-val Notification.sortKeyCompat get() = NotificationCompat.getSortKey(this)
+val Notification.sortKeyCompat
+    get() = NotificationCompat.getSortKey(this)

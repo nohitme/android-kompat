@@ -27,22 +27,26 @@ var SearchView.inputTypeCompat: Int
 /**
  * Call through [SearchViewCompat.setOnQueryTextListener]
  */
-fun SearchView.setOnQueryTextListenerCompat(listener: SearchViewCompat.OnQueryTextListener?) = SearchViewCompat.setOnQueryTextListener(this, listener)
+fun SearchView.setOnQueryTextListenerCompat(listener: SearchViewCompat.OnQueryTextListener?) =
+        SearchViewCompat.setOnQueryTextListener(this, listener)
 
 /**
  * Call through [SearchViewCompat.setOnCloseListener]
  */
-fun SearchView.setOnCloseListenerCompat(listener: SearchViewCompat.OnCloseListener) = SearchViewCompat.setOnCloseListener(this, listener)
+fun SearchView.setOnCloseListenerCompat(listener: SearchViewCompat.OnCloseListener) =
+        SearchViewCompat.setOnCloseListener(this, listener)
 
 /**
  * Call through [SearchViewCompat.getQuery]
  */
-val SearchView.queryCompat get() = SearchViewCompat.getQuery(this)
+val SearchView.queryCompat
+    get() = SearchViewCompat.getQuery(this)
 
 /**
  * Call through [SearchViewCompat.setQuery]
  */
-fun SearchView.setQueryCompat(query: CharSequence?, submit: Boolean) = SearchViewCompat.setQuery(this, query, submit)
+fun SearchView.setQueryCompat(query: CharSequence?, submit: Boolean) =
+        SearchViewCompat.setQuery(this, query, submit)
 
 /**
  * Call through [SearchViewCompat.setQueryHint] and [SearchView.getQueryHint]

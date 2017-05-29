@@ -1,4 +1,4 @@
-package ericlin.info.kompat.util
+package ericlin.info.kompat.text.util
 
 import android.support.v4.text.util.LinkifyCompat
 import android.text.Spannable

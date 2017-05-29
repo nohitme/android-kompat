@@ -6,4 +6,5 @@ import android.support.v4.app.ActivityManagerCompat
 /**
  * Call through [ActivityManagerCompat.isLowRamDevice]
  */
-fun ActivityManager.isLowRamDeviceCompat() = ActivityManagerCompat.isLowRamDevice(this)
+val ActivityManager.isLowRamDeviceCompat
+    get() = ActivityManagerCompat.isLowRamDevice(this)

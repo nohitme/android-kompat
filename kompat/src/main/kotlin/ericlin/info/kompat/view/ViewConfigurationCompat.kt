@@ -6,4 +6,4 @@ import android.view.ViewConfiguration
 /**
  * Call through [ViewConfigurationCompat.hasPermanentMenuKey]
  */
-val ViewConfiguration.hasPermanentMenuKeyCompat get() = ViewConfigurationCompat.hasPermanentMenuKey(this)
+fun ViewConfiguration.hasPermanentMenuKeyCompat() = ViewConfigurationCompat.hasPermanentMenuKey(this)

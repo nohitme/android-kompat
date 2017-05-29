@@ -10,22 +10,26 @@ import android.support.v4.content.ContextCompat
 /**
  * Call through [ContextCompat.startActivities]
  */
-fun Context.startActivitiesCompat(intents: Array<Intent>, options: Bundle? = null) = ContextCompat.startActivities(this, intents, options)
+fun Context.startActivitiesCompat(intents: Array<Intent>, options: Bundle? = null) =
+        ContextCompat.startActivities(this, intents, options)
 
 /**
  * Call through [ContextCompat.startActivity]
  */
-fun Context.startActivityCompat(intent: Intent, options: Bundle? = null) = ContextCompat.startActivity(this, intent, options)
+fun Context.startActivityCompat(intent: Intent, options: Bundle? = null) =
+        ContextCompat.startActivity(this, intent, options)
 
 /**
  * Call through [ContextCompat.getDataDir]
  */
-val Context.dataDirCompat get() = ContextCompat.getDataDir(this)
+val Context.dataDirCompat
+    get() = ContextCompat.getDataDir(this)
 
 /**
  * Call through [ContextCompat.getObbDirs]
  */
-val Context.obbDirsCompat get() = ContextCompat.getObbDirs(this)
+val Context.obbDirsCompat
+    get() = ContextCompat.getObbDirs(this)
 
 /**
  * Call through [ContextCompat.getExternalFilesDirs]
@@ -35,7 +39,8 @@ fun Context.getExternalFilesDirsCompat(type: String) = ContextCompat.getExternal
 /**
  * Call through [ContextCompat.getExternalCacheDirs]
  */
-val Context.externalCacheDirsCompat get() = ContextCompat.getExternalCacheDirs(this)
+val Context.externalCacheDirsCompat
+    get() = ContextCompat.getExternalCacheDirs(this)
 
 /**
  * Call through [ContextCompat.getDrawable]
@@ -60,12 +65,14 @@ fun Context.checkSelfPermissionCompat(permission: String) = ContextCompat.checkS
 /**
  * Call through [ContextCompat.getNoBackupFilesDir]
  */
-val Context.noBackupFilesDirCompat get() = ContextCompat.getNoBackupFilesDir(this)
+val Context.noBackupFilesDirCompat
+    get() = ContextCompat.getNoBackupFilesDir(this)
 
 /**
  * Call through [ContextCompat.getCodeCacheDir]
  */
-val Context.codeCacheDirCompat get() = ContextCompat.getCodeCacheDir(this)
+val Context.codeCacheDirCompat
+    get() = ContextCompat.getCodeCacheDir(this)
 
 /**
  * Call through [ContextCompat.createDeviceProtectedStorageContext]
@@ -75,5 +82,6 @@ fun Context.createDeviceProtectedStorageContextCompat() = ContextCompat.createDe
 /**
  * Call through [ContextCompat.isDeviceProtectedStorage]
  */
-fun Context.isDeviceProtectedStorageCompat() = ContextCompat.isDeviceProtectedStorage(this)
+val Context.isDeviceProtectedStorageCompat
+    get() = ContextCompat.isDeviceProtectedStorage(this)
 

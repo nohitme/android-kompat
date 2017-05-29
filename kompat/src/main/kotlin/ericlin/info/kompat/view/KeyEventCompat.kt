@@ -16,4 +16,5 @@ fun KeyEvent.hasNoModifiersCompat() = KeyEventCompat.hasNoModifiers(this)
 /**
  * Call through [KeyEventCompat.isCtrlPressed]
  */
-fun KeyEvent.isCtrlPressedCompat() = KeyEventCompat.isCtrlPressed(this)
+val KeyEvent.isCtrlPressedCompat
+    get() = KeyEventCompat.isCtrlPressed(this)

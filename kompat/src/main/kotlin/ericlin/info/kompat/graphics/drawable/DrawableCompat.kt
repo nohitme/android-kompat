@@ -2,6 +2,7 @@ package ericlin.info.kompat.graphics.drawable
 
 import android.content.res.ColorStateList
 import android.content.res.Resources
+import android.graphics.ColorFilter
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.support.annotation.ColorInt
@@ -19,7 +20,7 @@ fun Drawable.jumpToCurrentStateCompat() = DrawableCompat.jumpToCurrentState(this
 /**
  * Call through [DrawableCompat.setAutoMirrored] and [DrawableCompat.isAutoMirrored]
  */
-var Drawable.autoMirrored: Boolean
+var Drawable.isAutoMirroredCompat
     get() = DrawableCompat.isAutoMirrored(this)
     set(value) = DrawableCompat.setAutoMirrored(this, value)
 
@@ -50,9 +51,13 @@ fun Drawable.setTintListCompat(tint: ColorStateList?) = DrawableCompat.setTintLi
 fun Drawable.setTintModeCompat(tintMode: PorterDuff.Mode?) = DrawableCompat.setTintMode(this, tintMode)
 
 /**
- * Call through [DrawableCompat.getAlpha]
+ * Call through [DrawableCompat.getAlpha] and [Drawable.setAlpha]
  */
-val Drawable.alphaCompat get() = DrawableCompat.getAlpha(this)
+var Drawable.alphaCompat
+    get() = DrawableCompat.getAlpha(this)
+    set(value) {
+        this.alpha = value
+    }
 
 /**
  * Call through [DrawableCompat.applyTheme]
@@ -65,9 +70,13 @@ fun Drawable.Compat(theme: Resources.Theme) = DrawableCompat.applyTheme(this, th
 fun Drawable.canApplyThemeCompat() = DrawableCompat.canApplyTheme(this)
 
 /**
- * Call through [DrawableCompat.getColorFilter]
+ * Call through [DrawableCompat.getColorFilter] and [Drawable.getColorFilter]
  */
-val Drawable.colorFilterCompat get() = DrawableCompat.getColorFilter(this)
+var Drawable.colorFilterCompat: ColorFilter?
+    get() = DrawableCompat.getColorFilter(this)
+    set(value) {
+        this.colorFilter = value
+    }
 
 /**
  * Call through [DrawableCompat.clearColorFilter]
@@ -78,7 +87,10 @@ fun Drawable.clearColorFilterCompat() = DrawableCompat.clearColorFilter(this)
  * Call through [DrawableCompat.inflate]
  */
 @Throws(XmlPullParserException::class, IOException::class)
-fun Drawable.inflateCompat(resources: Resources, parser: XmlPullParser, attrs: AttributeSet, theme: Resources.Theme? = null) =
+fun Drawable.inflateCompat(resources: Resources,
+                           parser: XmlPullParser,
+                           attrs: AttributeSet,
+                           theme: Resources.Theme? = null) =
         DrawableCompat.inflate(this, resources, parser, attrs, theme)
 
 /**
@@ -97,6 +109,12 @@ fun <T : Drawable> Drawable.unwrapCompat() = DrawableCompat.unwrap<T>(this)
 fun Drawable.setLayoutDirectionCompat(layoutDirection: Int) = DrawableCompat.setLayoutDirection(this, layoutDirection)
 
 /**
- * Call through [DrawableCompat.getLayoutDirection]
+ * Call through [DrawableCompat.getLayoutDirection] and [DrawableCompat.setLayoutDirection]
+ *
+ * Note [DrawableCompat.setLayoutDirection] returns a boolean. Use the compat method directly if you need the return value.
  */
-val Drawable.layoutDirectionCompat get() = DrawableCompat.getLayoutDirection(this)
+var Drawable.layoutDirectionCompat
+    get() = DrawableCompat.getLayoutDirection(this)
+    set(value) {
+        DrawableCompat.setLayoutDirection(this, value)
+    }

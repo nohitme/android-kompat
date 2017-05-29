@@ -6,4 +6,5 @@ import android.support.v4.os.AsyncTaskCompat
 /**
  * Call through [AsyncTaskCompat.executeParallel]
  */
-fun <Params, Progress, Result> AsyncTask<Params, Progress, Result>.executeParallelCompat(varargs: Params) = AsyncTaskCompat.executeParallel(this, varargs)
+fun <Params, Progress, Result> AsyncTask<Params, Progress, Result>.executeParallelCompat(vararg params: Params) =
+        AsyncTaskCompat.executeParallel(this, *params)

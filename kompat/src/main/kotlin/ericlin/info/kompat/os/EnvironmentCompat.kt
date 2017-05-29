@@ -6,4 +6,5 @@ import java.io.File
 /**
  * Call through [EnvironmentCompat.getStorageState]
  */
-val File.storageStateCompat get() = EnvironmentCompat.getStorageState(this)
+val File.storageStateCompat
+    get() = EnvironmentCompat.getStorageState(this)

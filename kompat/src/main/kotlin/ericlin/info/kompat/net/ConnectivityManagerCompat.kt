@@ -12,10 +12,12 @@ fun ConnectivityManager.isActiveNetworkMeteredCompat() = ConnectivityManagerComp
 /**
  * Call through [ConnectivityManagerCompat.getNetworkInfoFromBroadcast]
  */
-fun ConnectivityManager.getNetworkInfoFromBroadcastCompat(intent: Intent) = ConnectivityManagerCompat.getNetworkInfoFromBroadcast(this, intent)
+fun ConnectivityManager.getNetworkInfoFromBroadcastCompat(intent: Intent) =
+        ConnectivityManagerCompat.getNetworkInfoFromBroadcast(this, intent)
 
 /**
  * Call through [ConnectivityManagerCompat.getRestrictBackgroundStatus]
  */
 @ConnectivityManagerCompat.RestrictBackgroundStatus
-fun ConnectivityManager.restrictBackgroundStatusCompat() = ConnectivityManagerCompat.getRestrictBackgroundStatus(this)
+fun ConnectivityManager.restrictBackgroundStatusCompat() =
+        ConnectivityManagerCompat.getRestrictBackgroundStatus(this)

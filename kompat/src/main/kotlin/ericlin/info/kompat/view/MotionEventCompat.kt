@@ -6,12 +6,14 @@ import android.view.MotionEvent
 /**
  * Call through [MotionEventCompat.getActionMasked]
  */
-val MotionEvent.actionMaskedCompat get() = MotionEventCompat.getActionMasked(this)
+val MotionEvent.actionMaskedCompat
+    get() = MotionEventCompat.getActionMasked(this)
 
 /**
  * Call through [MotionEventCompat.getActionIndex]
  */
-val MotionEvent.actionIndexCompat get() = MotionEventCompat.getActionIndex(this)
+val MotionEvent.actionIndexCompat
+    get() = MotionEventCompat.getActionIndex(this)
 
 /**
  * Call through [MotionEventCompat.isFromSource]
@@ -31,5 +33,6 @@ fun MotionEvent.getAxisValueCompat(axis: Int, pointerIndex: Int) = MotionEventCo
 /**
  * Call through [MotionEventCompat.getButtonState]
  */
-val MotionEvent.buttonStateCompat get() = MotionEventCompat.getButtonState(this)
+val MotionEvent.buttonStateCompat
+    get() = MotionEventCompat.getButtonState(this)
 

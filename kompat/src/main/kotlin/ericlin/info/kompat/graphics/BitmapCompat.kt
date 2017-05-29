@@ -13,4 +13,5 @@ var Bitmap.hasMipMapCompat: Boolean
 /**
  * Call through [BitmapCompat.getAllocationByteCount]
  */
-val Bitmap.allocationByteCountCompat get() = BitmapCompat.getAllocationByteCount(this)
+val Bitmap.allocationByteCountCompat
+    get() = BitmapCompat.getAllocationByteCount(this)
